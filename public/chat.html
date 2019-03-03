@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .fixed-action-btn {
+  position: absolute;
+  right: 23px;
+  bottom: -20px;
+  padding-top: 15px;
+ 
+  z-index: 997;
+}
+.form{
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+}
+#backButton{
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+</style>
+    <!-- Compiled and minified JavaScript -->
+
+    <link rel="stylesheet" href="./css/styles.css" type="text/html" />
+</head>
+
+<body style="background: linear-gradient(to right, rgb(107, 205, 235) ,rgb(3, 110, 180));">
+
+    <!-- recieved Chat -->
+   
+    <a id="backButton" class="btn-floating btn-medium waves-effect waves-light blue"><i class="material-icons">arrow_back</i></a>
+   
+    <div id="chat-group" style="padding-bottom: 8em;">
+        <div class="row from-chat" >
+
+            <div class="col s12">
+
+                <div class="card horizontal">
+
+                    <div class="card-content">
+                        <div class="">
+                            <div class="col s3 m3">
+                                <div style=" height: 3.5em; width: 3.5em; ">
+                                    <img src="images/avatar_disc-jockey.png" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="col s9 m9">
+                                <p style="color: #386895; font-size: 10px;">User name</p>
+                                <p>I am a very simple card. I am good at containing small bits of information.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-stacked">
+
+                        <div class="fixed-action-btn">
+                            <a class="btn-floating btn-medium red">
+                                <i class="large material-icons">dehaze</i>
+                            </a>
+                            <ul style="margin-right: -2em;">
+                                <li>
+                                    <a class="btn-floating btn-small red">
+                                        <i class="material-icons">error</i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="btn-floating btn-small yellow darken-1">
+                                        <i class="material-icons">thumb_down</i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="btn-floating btn-small green">
+                                        <i class="material-icons">thumb_up</i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="btn-floating btn-small blue">
+                                        <i class="material-icons">textsms</i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- sent chat -->
+        <div class="row from-chat" >
+
+            <div class="col s12">
+
+                <div class="card horizontal">
+
+                    <div class="card-content">
+                        <div class="">
+                            
+                            <div class="col s10 m10" style="overflow:hidden;">
+                                <p style="min-width: 280px; color: #386895; font-size: 10px;">User name</p>
+                                <p>lore</p>
+                            </div>
+                            <div class="col s2 m2">
+                                    <div style=" height: 3.5em; width: 3.5em; ">
+                                        <img src="images/avatar_disc-jockey.png" style="width: 100%;">
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="form" style="z-index: 9999;">
+
+        <div class="row">
+            <div class="input-field col s10">
+                <input type="text" id="userMessage" class="autocomplete">
+            </div>
+            <div class="input-field col s2">
+                <a id="sendMessage" class="btn-floating btn-medium waves-effect waves-light #00e5ff cyan accent-3"><i
+                        class="material-icons">message</i></a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script src="./js/fireBaseConfig.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/logic.js"></script>
+  
+</body>
+
+</html>
