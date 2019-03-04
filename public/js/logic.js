@@ -297,12 +297,24 @@ $(document).ready(function () {
           // console.log('myEmail : ' + chatEmail);
           if (snapshot.val().email === chatEmail) {
             // console.log('they match');
-            $("#chat-group").append(userMessageTemp);
-            window.scrollBy(0, 300);
+
+            if (window.location.href === 'http://localhost:8080/chat.html') {
+        
+              $("#chat-group").append(userMessageTemp);
+              window.scrollBy(0, 300);
+      
+            } 
+
           } else {
             // console.log('no match');
-            $("#chat-group").append(messageTemplete);
-            window.scrollBy(0, 300);
+            if (window.location.href === 'http://localhost:8080/chat.html') {
+        
+              $("#chat-group").append(messageTemplete);
+              window.scrollBy(0, 300);
+      
+            } 
+            
+      
           }
 
           var elems = document.querySelectorAll('.fixed-action-btn');
